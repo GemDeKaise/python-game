@@ -191,10 +191,10 @@ def main(m,beri):
     nota1_add_counter = 0
     note_add_counter = 0
     restanta_add_counter = 0
-    add_nota_rate = 30 - nivel * 2
+    add_nota_rate = 33 - nivel//2
     if add_nota_rate <= 5:
         add_nota_rate = 5
-    add_restanta_rate = 120 - nivel * 4
+    add_restanta_rate = 120 - nivel * 6
     basket = Basket(display_width * 0.35, display_height - 160)
     play = True
     while play:
@@ -216,7 +216,7 @@ def main(m,beri):
             f_type = random.randint(0, 1)
             if f_type == 1:
                f_type = random.randint(0, 1)
-            if score % 73 == 0:
+            if score % 45 == 0:
                f_type = 3
             new_nota = Note(f_startx, f_starty, f_type)
             note.append(new_nota)
